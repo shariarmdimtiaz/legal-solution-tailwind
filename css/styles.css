@@ -1,0 +1,14 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond&family=Poppins&family=Roboto&display=swap');
+
+.primary-font{
+    font-family: 'EB Garamond', serif;
+}
+.secondery-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.area:hover{
+    background: linear-gradient(180deg, #F3F3F3 0%, rgba(243, 243, 243, 0) 100%);
+    border: 1px solid #E7E7E7;
+}

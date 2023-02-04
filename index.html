@@ -1,12 +1,962 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legal Solutions</title>
-</head>
-<body>
-    
-</body>
+    <!-- tailwind css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              colortitle: "#414040",
+              colorsubtitle: "#707070",
+              colorbtn: "#B68C5A",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="container mx-auto lg:px-28">
+      <!-- navbar -->
+      <nav class="bg-white p-6">
+        <div
+          class="container mx-auto flex flex-wrap items-center justify-between"
+        >
+          <div
+            class="w-full md:w-1/3 text-center md:text-left flex items-center"
+          >
+            <img class="h-11 w-auto" src="images/logo-main.png" alt="" />
+            <a href="#" class="text-colortitle primary-font font-extrabold px-3"
+              >Justice</a
+            >
+          </div>
+          <div
+            class="w-full md:w-1/3 text-center flex items-start justify-end md:justify-center"
+          >
+            <ul
+              class="hidden justify-between md:flex items-center text-cente"
+              id="menu-content"
+            >
+              <li>
+                <a href="#" class="text-colorsubtitle p-3 hover:bg-orange-100"
+                  >Home</a
+                >
+              </li>
+              <li><p class="text-colorsubtitle px-2">></p></li>
+              <li>
+                <a href="#" class="text-colorsubtitle p-3 hover:bg-orange-100"
+                  >Services</a
+                >
+              </li>
+              <li><p class="text-colorsubtitle px-2">></p></li>
+              <li>
+                <a href="#" class="text-colorsubtitle p-3 hover:bg-orange-100"
+                  >Cases</a
+                >
+              </li>
+              <li><p class="text-colorsubtitle px-2">></p></li>
+              <li>
+                <a href="#" class="text-colorsubtitle p-3 hover:bg-orange-100"
+                  >Blog</a
+                >
+              </li>
+              <li><p class="text-colorsubtitle px-2">></p></li>
+              <li>
+                <a href="#" class="text-colorsubtitle p-3 hover:bg-orange-100"
+                  >Contact</a
+                >
+              </li>
+              <li><p class="text-colorsubtitle px-2">></p></li>
+            </ul>
+            <button
+              class="text-colorbtn cursor-pointer md:hidden"
+              id="menu-toggle"
+            >
+              <svg
+                class="fill-current h-6 w-6"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="w-full md:w-1/3 flex justify-start md:justify-end items-cente"
+          >
+            <!-- <button
+                class="bg-colorbtn text-white hover:bg-amber-600 px-5 py-3 rounded"
+              >
+                Free Consultation
+              </button> -->
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="px-6 py-2.5 bg-colorbtn text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-amber-500 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-amber-500 active:shadow-lg transition duration-150 ease-in-out"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+                Free Consultation
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog relative w-auto pointer-events-none">
+                <div
+                  class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
+                >
+                  <div
+                    class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
+                  >
+                    <h5
+                      class="text-xl font-medium leading-normal text-gray-800"
+                      id="exampleModalLabel"
+                    >
+                    Justice
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body relative p-4">
+                    Welcome to Jutice Solutions.
+                  </div>
+                  <div
+                    class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
+                  >
+                    <button
+                      type="button"
+                      class="px-6 py-2.5 bg-colorbtn text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-amber-500  hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <!-- <button
+                      type="button"
+                      class="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1"
+                    >
+                      Save changes
+                    </button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- end navbar -->
+
+      <!-- banner -->
+      <div class="mx-auto relative md:flex justify-center items-center pt-12">
+        <div class="absolute mx-auto my-auto">
+          <div class="px-5 md:px-52 text-center">
+            <h1
+              class="primary-font text-white text-3xl md:text-7xl font-extrabold"
+            >
+              We Provide Effective
+            </h1>
+            <h1
+              class="primary-font text-white text-3xl md:text-7xl font-extrabold"
+            >
+              Legal Solutions
+            </h1>
+            <p
+              class="py-3 secondery-font text-[#E7E7E7] font-normal text-sm md:text-base"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+          </div>
+          <div class="flex justify-center items-start p-2 md:px-60">
+            <input
+              class="shadow appearance-none border border-amber-600 rounded w-full py-3 px-3 text-[#A0A0A0] mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="text"
+              placeholder="Search your services"
+            />
+            <button
+              class="bg-colorbtn text-white ml-2 hover:bg-amber-600 px-5 py-3 rounded"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <div>
+          <img class="w-full" src="images/banner-1.png" alt="" />
+        </div>
+      </div>
+      <!-- end banner -->
+    </header>
+    <!-- end header -->
+    <!-- main section -->
+    <main class="container mx-auto lg:px-28">
+      <!-- legal practice area section -->
+      <section class="py-24">
+        <div class="text-center">
+          <h1 class="primary-font font-extrabold text-4xl py-6 text-colortitle">
+            The Legal Practice Area
+          </h1>
+          <p
+            class="secondery-font font-normal text-base text-colorsubtitle px-5 md:px-24 lg:px-36"
+          >
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+        </div>
+        <div class="py-16 grid grid-cols-1 md:grid-cols-3">
+          <div class="col text-center area p-5 border-b border-[#E7E7E7]">
+            <img class="mx-auto p-7" src="images/icon-1.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Business Law
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+          <div
+            class="col text-center area p-5 border-x border-b border-[#E7E7E7]"
+          >
+            <img class="mx-auto p-7" src="images/icon-2.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Criminal Law
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+          <div class="col text-center area p-5 border-b border-[#E7E7E7]">
+            <img class="mx-auto p-7" src="images/icon-3.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Child Support
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+          <div class="col text-center area p-5">
+            <img class="mx-auto p-7" src="images/icon-4.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Education Law
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+          <div class="col text-center area p-5 border-x border-[#E7E7E7]">
+            <img class="mx-auto p-7" src="images/icon-5.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Divorce Law
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+          <div class="col text-center area p-5">
+            <img class="mx-auto p-7" src="images/icon-6.png" alt="" />
+            <h3 class="primary-font font-extrabold text-3xl text-colortitle">
+              Tax Law
+            </h3>
+            <p
+              class="secondery-font font-normal text-colorsubtitle py-6 text-sm md:text-lg"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <img class="mx-auto p-7" src="images/icon-7.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- end legal practice area section -->
+
+      <!-- our client section -->
+      <section class="py-2">
+        <div class="text-center">
+          <h1 class="primary-font font-extrabold text-4xl text-colortitle">
+            What Our Client Say
+          </h1>
+          <p
+            class="secondery-font font-normal text-base text-colorsubtitle px-5 py-6 md:px-24 lg:px-36"
+          >
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+        </div>
+        <div class="py-10">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide relative"
+            data-bs-ride="carousel"
+          >
+            <div
+              class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+            >
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner relative w-full overflow-hidden">
+              <div class="carousel-item active relative float-left w-full">
+                <img
+                  src="images/banner-4.jpg"
+                  class="block w-full rounded"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption absolute transform -translate-y-1/2"
+                >
+                  <div class="text-center">
+                    <div class="flex">
+                      <img
+                        class="hidden md:block mx-auto my-auto rounded-full p-5"
+                        src="images/client-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <h3 class="primary-font font-extrabold text-3xl text-white">
+                      Awlad Hossain
+                    </h3>
+                    <p class="secondery-font font-normal py-2">UIX Designer</p>
+                    <p class="hidden md:block secondery-font font-normal py-2">
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="images/banner-5.jpg"
+                  class="block w-full rounded"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption absolute transform -translate-y-1/2"
+                >
+                  <div class="text-center">
+                    <div class="flex">
+                      <img
+                        class="hidden md:block mx-auto my-auto rounded-full p-5"
+                        src="images/client-2.png"
+                        alt=""
+                      />
+                    </div>
+                    <h3 class="primary-font font-extrabold text-3xl text-white">
+                      Mariya Kett
+                    </h3>
+                    <p class="secondery-font font-normal py-2">
+                      Senior Designer
+                    </p>
+                    <p class="hidden md:block secondery-font font-normal py-2">
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="images/banner-6.jpg"
+                  class="block w-full rounded"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption absolute transform -translate-y-1/2"
+                >
+                  <div class="text-center">
+                    <div class="flex">
+                      <img
+                        class="hidden md:block mx-auto my-auto rounded-full p-5"
+                        src="images/client-3.png"
+                        alt=""
+                      />
+                    </div>
+                    <h3 class="primary-font font-extrabold text-3xl text-white">
+                      Mariya Kett
+                    </h3>
+                    <p class="secondery-font font-normal py-2">
+                      Senior Designer
+                    </p>
+                    <p class="hidden md:block secondery-font font-normal py-2">
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- end our client section -->
+
+      <!-- FAQ section -->
+      <section class="py-12">
+        <div class="text-center">
+          <h1 class="primary-font font-extrabold text-4xl text-colortitle">
+            Frequently Asked Any Questions
+          </h1>
+          <p
+            class="secondery-font font-normal text-base text-colorsubtitle px-5 py-6 md:px-24 lg:px-36"
+          >
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-5">
+          <div class="col">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div
+                class="accordion-item border-t-0 border-l-0 border-r-0 rounded-none bg-white border border-gray-200"
+              >
+                <h2 class="accordion-header mb-0" id="flush-headingOne">
+                  <button
+                    class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse border-0 collapse show"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the first item's accordion body.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item border-l-0 border-r-0 rounded-none bg-white border border-gray-200"
+              >
+                <h2 class="accordion-header mb-0" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse border-0 collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item border-l-0 border-r-0 border-b-0 rounded-none bg-white border border-gray-200"
+              >
+                <h2 class="accordion-header mb-0" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img class="w-full" src="images/faq.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- end FAQ section -->
+
+      <!-- contact section -->
+      <section class="py-12">
+        <div class="text-center">
+          <h1 class="primary-font font-extrabold text-4xl text-colortitle">
+            Contact With Us
+          </h1>
+          <p
+            class="secondery-font font-normal text-base text-colorsubtitle px-5 py-6 md:px-24 lg:px-36"
+          >
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-5">
+          <div class="col grid grid-cols-2 gap-2">
+            <div class="col text-center">
+              <div class="flex">
+                <img class="mx-auto py-2" src="images/location.png" alt="" />
+              </div>
+              <p
+                class="primary-font font-extrabold text-xl text-colortitle py-3"
+              >
+                Address
+              </p>
+              <address
+                class="secondery-font font-normal text-base text-colorsubtitle"
+              >
+                A108 Adam Street,<br />
+                New York, NY 535022
+              </address>
+            </div>
+            <div class="col text-center">
+              <div class="flex">
+                <img class="mx-auto py-2" src="images/call.png" alt="" />
+              </div>
+              <p
+                class="primary-font font-extrabold text-xl text-colortitle py-3"
+              >
+                Call Us
+              </p>
+              <address
+                class="secondery-font font-normal text-base text-colorsubtitle"
+              >
+                +88 01750 00 00 00<br />+88 01750 00 00 00
+              </address>
+            </div>
+            <div class="col text-center">
+              <div class="flex">
+                <img class="mx-auto py-2" src="images/email.png" alt="" />
+              </div>
+              <p
+                class="primary-font font-extrabold text-xl text-colortitle py-3"
+              >
+                Email Us
+              </p>
+              <address
+                class="secondery-font font-normal text-base text-colorsubtitle"
+              >
+                info@gmail.com<br />info@gmail.com
+              </address>
+            </div>
+            <div class="col text-center">
+              <div class="flex">
+                <img class="mx-auto py-2" src="images/time.png" alt="" />
+              </div>
+              <p
+                class="primary-font font-extrabold text-xl text-colortitle py-3"
+              >
+                Working Hours
+              </p>
+              <address
+                class="secondery-font font-normal text-base text-colorsubtitle"
+              >
+                Mon-Fri: 9AM to 5PM<br />Sunday: 9AM to 1 PM
+              </address>
+            </div>
+          </div>
+          <div class="col">
+            <div class="grid gap-7 grid-cols-1">
+              <input
+                type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-[#707070] bg-[#F3F3F3] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="exampleFormControlInput1"
+                placeholder="Your Name"
+              />
+              <input
+                type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-[#707070] bg-[#F3F3F3] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="exampleFormControlInput1"
+                placeholder="Your Email"
+              />
+
+              <input
+                type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-[#707070] bg-[#F3F3F3] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="exampleFormControlInput1"
+                placeholder="Subject"
+              />
+
+              <textarea
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-[#707070] bg-[#F3F3F3] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Your message"
+              ></textarea>
+              <button
+                type="button"
+                class="mb-2 w-full inline-block px-6 py-2.5 bg-[#B68C5A] text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-amber-600 hover:shadow-lg focus:bg-amber-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-amber-600 active:shadow-lg transition duration-150 ease-in-out"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end contact section -->
+    </main>
+    <!-- end main -->
+    <!-- footer section -->
+    <footer class="text-center lg:text-left bg-[#111111] text-white">
+      <div
+        class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300"
+      >
+        <div class="mr-12 hidden lg:block">
+          <span>Get connected with us on social networks</span>
+        </div>
+        <div class="flex justify-center">
+          <a href="#!" class="mr-6 text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="facebook-f"
+              class="w-2.5"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                fill="currentColor"
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#!" class="mr-6 text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="twitter"
+              class="w-4"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#!" class="mr-6 text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="google"
+              class="w-3.5"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 488 512"
+            >
+              <path
+                fill="currentColor"
+                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#!" class="mr-6 text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="instagram"
+              class="w-3.5"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#!" class="mr-6 text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="linkedin-in"
+              class="w-3.5"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#!" class="text-gray-600">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              class="w-4"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+            >
+              <path
+                fill="currentColor"
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="mx-6 py-10 text-center md:text-left">
+        <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="">
+            <h6
+              class="text-white primary-font font-extrabold text-2xl mb-4 flex items-center justify-center md:justify-start"
+            >
+              <img class="w-[32px]" src="images/logo-main.png" alt="" /> &nbsp;
+              Justice
+            </h6>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+          </div>
+          <div class="">
+            <h6
+              class="uppercase font-semibold mb-4 flex justify-center md:justify-start"
+            >
+              Useful Link
+            </h6>
+            <p class="mb-4">
+              <a href="#!" class="text-gray-600">Home</a>
+            </p>
+            <p class="mb-4">
+              <a href="#!" class="text-gray-600">About Us</a>
+            </p>
+            <p class="mb-4">
+              <a href="#!" class="text-gray-600">Cases</a>
+            </p>
+            <p class="mb-4">
+              <a href="#!" class="text-gray-600">Blog</a>
+            </p>
+            <p>
+              <a href="#!" class="text-gray-600">Contact Us</a>
+            </p>
+          </div>
+          <div class="">
+            <h6
+              class="uppercase font-semibold mb-4 flex justify-center md:justify-start"
+            >
+              Contact Now
+            </h6>
+            <p class="mb-4 text-gray-600">
+              555 4th 5t NW, Washington <br />
+              DC 20530, United States
+            </p>
+            <p class="mb-4 text-gray-600">
+              +88 01750 000 000 <br />
+              +88 01750 000 000
+            </p>
+            <!-- <p class="mb-4">
+                <a href="#!" class="text-gray-600">Orders</a>
+              </p> -->
+            <p class="text-gray-600">info@gmail.com<br />info@gmail.com</p>
+          </div>
+          <div class="">
+            <h6
+              class="uppercase font-semibold mb-4 flex justify-center md:justify-start"
+            >
+              Subscribe
+            </h6>
+            <p class="mb-4 text-gray-600">
+              Subscribe for our latest & Articles. We Won’t Give You Spam Mails
+            </p>
+
+            <div class="py-2">
+              <!-- <label for="hs-trailing-button-add-on" class="sr-only">Label</label> -->
+              <div class="flex rounded-md shadow-sm">
+                <input
+                  type="text"
+                  id="hs-trailing-button-add-on"
+                  placeholder="Email Address"
+                  name="hs-trailing-button-add-on"
+                  class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-l-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-white dark:border-gray-700 dark:text-gray-400"
+                />
+                <button
+                  type="button"
+                  class="py-3 px-4 inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-r-md border border-transparent font-semibold bg-[#B68C5A] text-white hover:bg-[#B68C5A] focus:z-10 focus:outline-none focus:ring-2 focus:ring-white transition-all text-sm"
+                >
+                  <img
+                    class="origin-center hover:rotate-45 duration-300"
+                    src="images/send.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-6 bg-[#111111]">
+        <p class="text-white">Copyright © 2023 Legal Justice Solutions</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- js script -->
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("menu-content").classList.toggle("hidden");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
 </html>
